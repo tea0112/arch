@@ -119,7 +119,7 @@ sudo systemctl enable bluetooth
 ```
 sudo pacman -S i3-gaps i3blocks i3lock numlockx i3status xterm
 sudo pacman -S lightdm lightdm-gtk-greeter --needed
-sudo pacman -S linux linux-headers base-devel
+sudo pacman -S linux linux-headers base-devel lxqt-policykit
 sudo pacman -S i3blocks polybar feh
 sudo systemctl enable lightdm
 sudo pacman -S noto-fonts ttf-ubuntu-font-family ttf-dejavu ttf-freefont
