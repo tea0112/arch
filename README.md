@@ -7,6 +7,7 @@ pacman -Syy
 pacman -S reflector
 cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bak
 reflector --country "Singapore" --latest 5 --protocol https --sort rate --save /etc/pacman.d/mirrorlist
+timedatectl set-ntp true
 ```
 ## Partition
 ```
@@ -31,7 +32,6 @@ arch-chroot /mnt
 ## Time
 ```
 ln -sf /usr/share/zoneinfo/Asia/Ho_Chi_Minh /etc/localtime
-timedatectl set-timezone Asia/Ho_Chi_Minh
 hwclock --systohc
 ```
 ## Localization
@@ -57,7 +57,7 @@ passwd
 ```
 ## Package Installation
 ```
-pacman -S grub efibootmgr sudo neovim iw wpa_supplicant dialog git lshw
+pacman -S grub efibootmgr sudo iw wpa_supplicant dialog git lshw
 ```
 ## Grub Installation
 ```
@@ -120,7 +120,7 @@ sudo systemctl enable bluetooth
 sudo pacman -S i3-gaps i3blocks i3lock numlockx i3status xterm
 sudo pacman -S lightdm lightdm-gtk-greeter --needed
 sudo pacman -S linux linux-headers base-devel
-sudo pacman -S i3blocks polybar
+sudo pacman -S i3blocks polybar feh
 sudo systemctl enable lightdm
 sudo pacman -S noto-fonts ttf-ubuntu-font-family ttf-dejavu ttf-freefont
 sudo pacman -S ttf-liberation ttf-droid ttf-roboto terminus-font
