@@ -94,7 +94,7 @@ reboot
 ```
 ## Bluetooth
 ```
-sudo pacman -S bluez bluez-utils blueman tlp tlp-rdw powertop acpi
+sudo pacman -S bluez bluez-utils tlp tlp-rdw powertop acpi
 ``` 
 ```
 # edit /etc/bluetooth/main.conf
