@@ -125,12 +125,22 @@ sudo systemctl enable lightdm
 sudo pacman -S noto-fonts ttf-ubuntu-font-family ttf-dejavu ttf-freefont
 sudo pacman -S ttf-liberation ttf-droid ttf-roboto terminus-font
 sudo pacman -S rxvt-unicode ranger rofi dmenu --needed
-sudo pacman -S firefox vlc --needed
+sudo pacman -S firefox vlc docker --needed
+sudo systemctl enable docker
+sudo usermod -aG docker thai
 ```
+
+## git
+```
+git config --global user.name ""
+git config --global user.email ""
+```
+
 ## Edit xinitrc file
 ```
-cp /etc/X11/xinit/xinitrc ~/.xinitrc
+cp /etc/X11/xinit/xinitrc /home/thai/.xinitrc
 # exec i3
-nvim ~/.xinitrc
-startx
+nvim /home/thai/.xinitrc
+touch /home/thai/.Xresources
+echo "Xft.dpi: 96" /home/thai/.Xresources
 ```
