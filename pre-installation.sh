@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-./1-change-mirror.sh
+./1-sync-time.sh
 echo "======================== type device ========================"
 read dev_sdx
 ./2-wipe-all.sh "${dev_sdx}"
