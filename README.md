@@ -118,8 +118,8 @@ sudo systemctl enable bluetooth
 # Gnome
 ```
 sudo pacman -S gnome
-sudo systemctl start gdm.service
 sudo systemctl enable gdm.service
+sudo systemctl start gdm.service
 ```
 
 # i3
