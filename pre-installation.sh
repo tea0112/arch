@@ -2,7 +2,7 @@
 
 
 ./1-change-mirror.sh
-echo "type device"
+echo "======================== type device ========================"
 read dev_sdx
 ./2-wipe-all.sh "${dev_sdx}"
 ./3-make-gpt.sh "${dev_sdx}"
