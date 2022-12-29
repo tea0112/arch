@@ -9,4 +9,4 @@ passwd "${USERNAME}"
 
 usermod -aG wheel,audio,video,storage,power "${USERNAME}"
 
-sed --in-place 's/^#\s*\(%wheel\s\+ALL=(ALL)\s\+NOPASSWD:\s\+ALL\)/\1/' /etc/sudoers
+sed -i '1,/# %wheel.*)\sALL/s/# //g' /etc/sudoers
