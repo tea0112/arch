@@ -115,6 +115,13 @@ load-module module-bluetooth-discover
 ```
 sudo systemctl enable bluetooth
 ```
+# Gnome
+```
+sudo pacman -S gnome
+sudo systemctl start gdm.service
+sudo systemctl enable gdm.service
+```
+
 # i3
 ```
 sudo pacman -S i3-gaps i3blocks i3lock numlockx i3status xterm
