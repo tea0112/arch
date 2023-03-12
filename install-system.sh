@@ -5,6 +5,7 @@ pacman -Syy
 timedatectl set-ntp true
 
 ################ partitioning and formatting disk
+lsblk
 read -p "Enter your device name(Ex: '/dev/sda'): " device_name
 
 echo "*** Wipe out all disk!"
