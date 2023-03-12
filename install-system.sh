@@ -29,9 +29,11 @@ swapon "${device_name}2"
 mount "${device_name}3" /mnt
 
 ################ Install system
+echo "*** Install system"
 pacman -Sy archlinux-keyring && pacman -Su
 pacstrap /mnt base linux linux-firmware base-devel vim nano neovim tmux git go
 genfstab -U /mnt >> /mnt/etc/fstab
+mv /root/arch /mnt/tmp
 echo "Finish installing ISO!"
 echo "Run ----> arch-chroot /mnt"
 

@@ -3,7 +3,6 @@
 ################ Set localization
 echo "*** Set localization"
 export LANG=en_US.UTF-8
-echo "======================= Set Localization ======================="
 echo LANG=en_US.UTF-8 > /etc/locale.conf
 sed -e '/en_US.UTF-8/s/^# *//g' -i /etc/locale.gen
 locale-gen
@@ -25,17 +24,18 @@ echo "127.0.1.1        ${HOST_NAME}" >> /etc/hosts
 
 ################ Set root's password
 echo "*** Set root's password"
-echo "Type your root passwd below:"
+echo "Type your root's passwd below:"
 passwd
 
 ################ Install package and enable service
 echo "*** Install package and enable service"
-pacman -S grub efibootmgr sudo iw wpa_supplicant dialog lshw xorg networkmanager xorg-server xorg-apps xorg-xinit htop unzip wget pulseaudio alsa-utils alsa-plugins pulseaudio-bluetooth pulseaudio alsa-utils alsa-plugins bluez bluez-utils tlp tlp-rdw powertop acpi openssh dhcpcd
+pacman -S grub efibootmgr sudo iw wpa_supplicant dialog lshw xorg networkmanager xorg-server xorg-apps xorg-xinit htop unzip wget pulseaudio alsa-utils alsa-plugins pulseaudio-bluetooth pulseaudio alsa-utils alsa-plugins bluez bluez-utils tlp tlp-rdw powertop acpi openssh dhcpcd docker
 
 echo "Enable NetworkManager, sshd, dhcpcd"
 systemctl enable NetworkManager
 systemctl enable sshd
 systemctl enable dhcpcd
+systemctl enable docker
 
 ################ Set GRUB
 echo "*** Set GRUB"
