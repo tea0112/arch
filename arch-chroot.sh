@@ -29,7 +29,7 @@ passwd
 
 ################ Install package and enable service
 echo "*** Install package and enable service"
-pacman -S grub efibootmgr sudo iw wpa_supplicant dialog lshw xorg networkmanager xorg-server xorg-apps xorg-xinit htop unzip wget pulseaudio alsa-utils alsa-plugins pulseaudio-bluetooth pulseaudio alsa-utils alsa-plugins bluez bluez-utils tlp tlp-rdw powertop acpi openssh dhcpcd docker noto-fonts ttf-ubuntu-font-family ttf-dejavu ttf-freefont ttf-liberation ttf-droid ttf-roboto terminus-font rxvt-unicode ranger rofi dmenu firefox lightdm lightdm-gtk-greeter lxappearance arc-gtk-theme papirus-icon-theme
+pacman -S grub efibootmgr sudo iw wpa_supplicant dialog lshw xorg networkmanager xorg-server xorg-apps xorg-xinit htop unzip wget pulseaudio alsa-utils alsa-plugins pulseaudio-bluetooth pulseaudio alsa-utils alsa-plugins bluez bluez-utils tlp tlp-rdw powertop acpi openssh dhcpcd docker noto-fonts ttf-ubuntu-font-family ttf-dejavu ttf-freefont ttf-liberation ttf-droid ttf-roboto terminus-font rxvt-unicode ranger rofi dmenu firefox lightdm lightdm-gtk-greeter lxappearance arc-gtk-theme papirus-icon-theme pa-applet-git
 
 echo "Enable Services"
 systemctl enable lightdm
