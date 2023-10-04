@@ -18,3 +18,5 @@ mount -o noatime,nodiratime,compress=zstd,space_cache=v2,ssd,subvolid=5 /dev/sda
 mount /dev/sda1 /mnt/boot/efi
 
 pacstrap /mnt linux-lts linux-lts-headers base base-devel btrfs-progs vim neovim nano git
+
+mkinitcpio -p linux-lts
