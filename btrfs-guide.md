@@ -17,6 +17,8 @@ mount -o noatime,nodiratime,compress=zstd,space_cache=v2,ssd,subvol=@snapshots /
 mount -o noatime,nodiratime,compress=zstd,space_cache=v2,ssd,subvolid=5 /dev/sda3 /mnt/btrfs
 mount /dev/sda1 /mnt/boot/efi
 
-pacstrap /mnt linux-lts linux-lts-headers base base-devel btrfs-progs vim neovim nano git
+pacstrap /mnt intel-ucode linux-lts linux-lts-headers base base-devel btrfs-progs vim neovim nano git
+
+genfstab -U /mnt >> /mnt/etc/fstab
 
 mkinitcpio -p linux-lts
