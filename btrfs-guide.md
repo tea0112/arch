@@ -53,12 +53,19 @@ usermod -aG wheel,audio,video,storage username
 EDITOR=nvim visudo
 
 pacman -S xorg networkmanager gnome bluez bluez-utils
-# pipewire-jack
-# wireplumber
-# noto-fonts-emoji
+## pipewire-jack
+## wireplumber
+## noto-fonts-emoji
 
 pacman -S firefox vlc 
 
 systemctl enable bluetooth
 systemctl enable gdm
 systemctl enable NetworkManager
+
+# use snapper for snapshot
+
+# recover from snapshot
+## boot to ISO
+## mount -t btrfs -o subvolid=5 /dev/sda3 /mnt
+## btrfs subvolume snapshot /mnt/@/.snapshots/#number/snapshot /mnt/@
