@@ -21,4 +21,50 @@ pacstrap /mnt intel-ucode linux-lts linux-lts-headers base base-devel btrfs-prog
 
 genfstab -U /mnt >> /mnt/etc/fstab
 
+arch-chroot /mnt
+
+echo 'arch8570w' > /etc/hostname
+
+echo LANG=en_US.UTF-8 > /etc/locale.conf
+
+nvim /etc/locale.gen
+# uncomment en_US.UTF-8
+
+locale-gen
+
+ln -sf /usr/share/zoneinfo/Asia/Ho_Chi_Minh /etc/localtime
+
+hwclock --systohc
+
+nvim /etc/hosts
+# 127.0.0.1           localhost
+# ::1                 localhost
+# 127.0.0.1           arch8570w
+
 mkinitcpio -p linux-lts
+
+passwd
+
+pacman -S grub efibootmgr sudo
+
+grub-install --target=x86_64-efi --bootloader-id=GRUB --efi-directory=/boot/efi
+
+grub-mkconfig -o /boot/grub/grub.cfg
+
+useradd -m username
+passwd username
+
+usermod -aG wheel,audio,video,storage username
+
+EDITOR=nvim visudo
+
+pacman -S xorg networkmanager gnome bluez bluez-utils
+# pipewire-jack
+# wireplumber
+# noto-fonts-emoji
+
+pacman -S firefox vlc 
+
+systemctl enable bluetooth
+systemctl enable gdm
+systemctl enable NetworkManager
