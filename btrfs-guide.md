@@ -68,4 +68,6 @@ systemctl enable NetworkManager
 # recover from snapshot
 ## boot to ISO
 ## mount -t btrfs -o subvolid=5 /dev/sda3 /mnt
-## btrfs subvolume snapshot /mnt/@/.snapshots/#number/snapshot /mnt/@
+## mv /mnt/@/ /mnt/@-old
+## btrfs subvolume snapshot /mnt/@-old/.snapshots/#number/snapshot /mnt/@
+## rm -rf /mnt/@-old
