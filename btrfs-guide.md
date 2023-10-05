@@ -26,7 +26,7 @@ genfstab -U /mnt >> /mnt/etc/fstab
 
 arch-chroot /mnt
 
-echo 'arch8570w' > /etc/hostname
+echo arch8570w > /etc/hostname
 
 echo LANG=en_US.UTF-8 > /etc/locale.conf
 
