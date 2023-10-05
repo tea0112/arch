@@ -55,6 +55,7 @@ grub-install --target=x86_64-efi --bootloader-id=GRUB --efi-directory=/boot/efi
 grub-mkconfig -o /boot/grub/grub.cfg
 
 useradd -m username
+
 passwd username
 
 usermod -aG wheel,audio,video,storage username
@@ -66,7 +67,7 @@ pacman -S xorg networkmanager gnome bluez bluez-utils
 // wireplumber
 // noto-fonts-emoji
 
-pacman -S firefox vlc 
+pacman -S firefox vlc alsa-utils
 
 systemctl enable bluetooth
 
