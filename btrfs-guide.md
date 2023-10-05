@@ -3,7 +3,7 @@ btrfs sub create /mnt/@
 btrfs sub create /mnt/@home
 umount /mnt
 
-# noatime, nodiratime - fully disables writing file access times to the drive every time you read a file. This works well for almost all applications, except for those that need to know if a file has been read since the last time it was modified. The write time information to a file will continue to be updated anytime the file is written to with this option enabled.
+// noatime, nodiratime - fully disables writing file access times to the drive every time you read a file. This works well for almost all applications, except for those that need to know if a file has been read since the last time it was modified. The write time information to a file will continue to be updated anytime the file is written to with this option enabled.
 # The **relatime** option was introduced to mitigate the issues with the noatime option.
 mount -o noatime,nodiratime,compress=zstd,space_cache=v2,ssd,subvol=@ /dev/sda3 /mnt
 mkdir -p /mnt/{boot/efi,home,snapshots,btrfs}
