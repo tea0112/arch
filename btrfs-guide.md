@@ -128,7 +128,7 @@ pacman -S xorg networkmanager gnome bluez bluez-utils
 // noto-fonts-emoji
 
 ```
-pacman -S firefox vlc
+pacman -S firefox vlc snapper
 ```
 
 
