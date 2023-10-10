@@ -78,6 +78,7 @@ arc-gtk-theme
 papirus-icon-theme
 polybar
 lxqt-policykit
+blueman
 ```
 
 # sound
@@ -108,6 +109,7 @@ loupe
 gnome-calculator
 okular
 feh
+gimp
 ```
 
 # font
