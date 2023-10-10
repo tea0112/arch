@@ -80,6 +80,7 @@ polybar
 lxqt-policykit
 blueman
 xfce4-power-manager
+copyq
 ```
 
 # sound
