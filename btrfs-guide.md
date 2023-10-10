@@ -126,7 +126,7 @@ pacman -S alsa-utils alsa-plugins
 
 - check out i3-dependencies markdown file
 ```
-pacman -S xorg networkmanager gnome bluez bluez-utils
+pacman -S xorg networkmanager bluez bluez-utils
 ```
 
 - check out i3-dependencies markdown file
@@ -138,14 +138,7 @@ pacman -S firefox vlc snapper
 - enable services 
 ```
 systemctl enable bluetooth
-```
-```
 systemctl enable pipewire-pulse
-```
-```
-systemctl enable gdm
-```
-```
 systemctl enable NetworkManager
 ```
 
