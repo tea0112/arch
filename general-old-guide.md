@@ -45,11 +45,11 @@ export LANG=en_US.UTF-8
 ## Network
 ```
 # Create the hostname file
-echo arch-8570w > /etc/hostname
+echo arch > /etc/hostname
 # edit /etc/hosts file
 127.0.0.1        localhost
 ::1              localhost
-127.0.1.1        arch-8570w
+127.0.1.1        arch
 ```
 ## Root Password
 ```
@@ -68,9 +68,9 @@ grub-mkconfig -o /boot/grub/grub.cfg
 ```
 ## User
 ```
-useradd -m thai
-passwd thai
-usermod -aG wheel,audio,video,storage,power thai
+useradd -m username
+passwd username
+usermod -aG wheel,audio,video,storage,power username
 EDITOR=nvim visudo
 %wheel ALL=(ALL) ALL
 ```
@@ -124,7 +124,7 @@ sudo systemctl start gdm.service
 
 # i3
 ```
-sudo pacman -S i3-gaps i3blocks i3lock numlockx i3status xterm
+sudo pacman -S i3-wm i3blocks i3lock numlockx i3status xterm
 sudo pacman -S lightdm lightdm-gtk-greeter --needed
 sudo pacman -S linux linux-headers base-devel lxqt-policykit
 sudo pacman -S i3blocks polybar feh
@@ -134,7 +134,7 @@ sudo pacman -S ttf-liberation ttf-droid ttf-roboto terminus-font
 sudo pacman -S rxvt-unicode ranger rofi dmenu --needed
 sudo pacman -S firefox vlc pavucontrol docker --needed
 sudo systemctl enable docker
-sudo usermod -aG docker thai
+sudo usermod -aG docker username
 ```
 
 ## git
@@ -143,11 +143,3 @@ git config --global user.name ""
 git config --global user.email ""
 ```
 
-## Edit xinitrc file
-```
-cp /etc/X11/xinit/xinitrc /home/thai/.xinitrc
-# exec i3
-nvim /home/thai/.xinitrc
-touch /home/thai/.Xresources
-echo "Xft.dpi: 96" /home/thai/.Xresources
-```

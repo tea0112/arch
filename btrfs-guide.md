@@ -88,6 +88,7 @@ mkinitcpio -p linux-lts
 passwd
 ```
 
+- check out i3-dependencies markdown file
 ```
 pacman -S grub efibootmgr sudo
 ```
@@ -116,17 +117,19 @@ usermod -aG wheel,audio,video,storage username
 EDITOR=nvim visudo
 ```
 
+- check out i3-dependencies markdown file
 - sound system
 ```
-pacman -S pipewire-jack pipewire pipewire-pulse wireplumber pipewire-audio pipewire-alsa pipewire-pulse
-pacman -S alsa-utils
+pacman -S pipewire pipewire-audio pipewire-jack pipewire-pulse pipewire-alsa wireplumber
+pacman -S alsa-utils alsa-plugins
 ```
 
+- check out i3-dependencies markdown file
 ```
 pacman -S xorg networkmanager gnome bluez bluez-utils
 ```
-// noto-fonts-emoji
 
+- check out i3-dependencies markdown file
 ```
 pacman -S firefox vlc snapper
 ```
