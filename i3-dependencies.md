@@ -79,6 +79,7 @@ papirus-icon-theme
 polybar
 lxqt-policykit
 blueman
+xfce4-power-manager
 ```
 
 # sound
@@ -97,6 +98,7 @@ pavucontrol
 
 # multimedia
 ```
+thunnar
 zathura
 zathura-cb
 zathura-djvu
