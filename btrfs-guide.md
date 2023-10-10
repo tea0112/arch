@@ -138,7 +138,6 @@ pacman -S firefox vlc snapper
 - enable services 
 ```
 systemctl enable bluetooth
-systemctl enable pipewire-pulse
 systemctl enable NetworkManager
 ```
 
