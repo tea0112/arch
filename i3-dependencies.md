@@ -57,6 +57,7 @@ xorg
 xorg-server
 xorg-apps
 xorg-xinit
+picom
 i3-wm
 i3blocks
 i3lock
