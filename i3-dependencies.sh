@@ -39,6 +39,7 @@ sudo pacman -S \
 	cmake \
 	meson \
 	rsync \
+	tmuxp \
 	iw \
 	wpa_supplicant \
 	networkmanager \

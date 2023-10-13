@@ -39,6 +39,7 @@ breeze-icons
 cmake
 meson
 rsync
+tmuxp
 ```
 
 # network
