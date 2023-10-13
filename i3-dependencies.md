@@ -15,6 +15,7 @@ wget
 bluez
 bluez-utils
 docker
+docker-compose
 gcc
 ripgrep-all
 jq
@@ -57,6 +58,9 @@ xorg
 xorg-server
 xorg-apps
 xorg-xinit
+xdg-utils
+xdg-desktop-portal
+xdg-desktop-portal-gtk
 picom
 i3-wm
 i3blocks
