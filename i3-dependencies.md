@@ -40,6 +40,7 @@ cmake
 meson
 rsync
 tmuxp
+dos2unix
 ```
 
 # network

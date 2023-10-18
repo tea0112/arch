@@ -40,6 +40,7 @@ sudo pacman -S \
 	meson \
 	rsync \
 	tmuxp \
+	dos2unix \
 	iw \
 	wpa_supplicant \
 	networkmanager \
