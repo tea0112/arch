@@ -25,8 +25,10 @@ sudo pacman -S \
 	zsh \
 	zoxide \
 	starship \
+	gnome-disk-utility \
 	ripgrep \
 	xsel \
+	ttf-font-awesome \
 	wmctrl \
 	xdotool \
 	gnome-keyring \
@@ -47,40 +49,12 @@ sudo pacman -S \
 	openssh \
 	dhcpcd \
 	aria2 \
-	network-manager-applet \
 	xorg \
 	xorg-server \
 	xorg-apps \
 	xorg-xinit \
-	xdg-utils \
-	xdg-desktop-portal \
-	xdg-desktop-portal-gtk \
-	picom \
-	i3-wm \
-	i3blocks \
-	i3lock \
-	numlockx \
-	i3status \
-	xterm \
-	flameshot \
 	alacritty \
-	rxvt-unicode \
-	ranger \
-	rofi \
-	rofimoji \
-	dmenu \
 	firefox \
-	lightdm \
-	lightdm-gtk-greeter \
-	lxappearance \
-	arc-gtk-theme \
-	papirus-icon-theme \
-	polybar \
-	lxqt-policykit \
-	blueman \
-	xfce4-power-manager \
-	copyq \
-	autorandr \
 	alsa-utils \
 	alsa-plugins \
 	pipewire \
@@ -90,8 +64,6 @@ sudo pacman -S \
 	pipewire-alsa \
 	wireplumber \
 	mpv \
-	pavucontrol \
-	thunnar \
 	zathura \
 	zathura-cb \
 	zathura-djvu \
@@ -103,7 +75,6 @@ sudo pacman -S \
 	loupe \
 	gnome-calculator \
 	okular \
-	feh \
 	gimp \
 	noto-fonts \
 	noto-fonts-cjk \
@@ -118,10 +89,66 @@ sudo pacman -S \
 	ttf-font-awesome \
 	terminus-font
 
+read -r -p "Install dependencies for i3?([y]):" confirm
+case $confirm in
+yes)
+	pacman -S network-manager-applet \
+		xdg-utils \
+		xdg-desktop-portal \
+		picom \
+		i3-wm \
+		i3blocks \
+		i3lock \
+		numlockx \
+		i3status \
+		xterm \
+		flameshot \
+		rxvt-unicode \
+		ranger \
+		rofi \
+		dmenu \
+		rofimoji \
+		lightdm \
+		lightdm-gtk-greeter \
+		lxappearance \
+		arc-gtk-theme \
+		papirus-icon-theme \
+		polybar \
+		lxqt-policykit \
+		blueman \
+		xfce4-power-manager \
+		copyq \
+		autorandr \
+		pavucontrol \
+		thunnar \
+		feh \
+		xdg-desktop-portal-gtk
+	systemctl enable lightdm
+	;;
+*)
+	echo "You choose NO"
+	;;
+esac
+
+read -r -p "Install dependencies for Gnome([y]):" confirm
+case $confirm in
+yes)
+	pacman -S gnome \
+		seahosrse \
+		nautilus-sendto \
+		gnome-tweaks \
+		gnome-usage
+
+	systemctl enable gdm
+	;;
+*)
+	echo "You choose NO"
+	;;
+esac
+
 echo "Enable Services"
-sudo systemctl enable lightdm
-sudo systemctl enable NetworkManager
-sudo systemctl enable sshd
-sudo systemctl enable dhcpcd
-sudo systemctl enable docker
-sudo systemctl enable bluetooth
+systemctl enable NetworkManager
+systemctl enable sshd
+systemctl enable dhcpcd
+systemctl enable docker
+systemctl enable bluetooth
