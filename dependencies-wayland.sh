@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# FOR wayland
+# FOR X11
 sudo pacman -S \
 	grub \
 	efibootmgr \
@@ -20,19 +20,24 @@ sudo pacman -S \
 	ripgrep-all \
 	jq \
 	eza \
+	xclip \
 	fd \
 	zsh \
 	zoxide \
 	starship \
 	gnome-disk-utility \
 	ripgrep \
+	xsel \
 	ttf-font-awesome \
+	wmctrl \
+	xdotool \
 	gnome-keyring \
 	gvfs-mtp \
 	tumbler \
 	fzf \
 	tmux \
 	flatpak \
+	breeze-icons \
 	cmake \
 	meson \
 	rsync \
@@ -44,6 +49,10 @@ sudo pacman -S \
 	openssh \
 	dhcpcd \
 	aria2 \
+	xorg \
+	xorg-server \
+	xorg-apps \
+	xorg-xinit \
 	alacritty \
 	firefox \
 	alsa-utils \
@@ -63,6 +72,8 @@ sudo pacman -S \
 	vlc \
 	telegram-desktop \
 	qbittorrent \
+	loupe \
+	gnome-calculator \
 	okular \
 	gimp \
 	noto-fonts \
@@ -129,18 +140,6 @@ yes)
 		gnome-usage
 
 	systemctl enable gdm
-	;;
-*)
-	echo "You choose NO"
-	;;
-esac
-
-read -r -p "Install dependencies for KDE([yes]):" confirm
-case $confirm in
-yes)
-	pacman -S --needed xorg sddm plasma plasma-wayland-session kde-applications
-
-	systemctl enable sddm
 	;;
 *)
 	echo "You choose NO"
