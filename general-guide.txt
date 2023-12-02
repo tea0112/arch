@@ -1,6 +1,9 @@
 # warning
 using wayland
 
+pacman-key --init
+pacman -S archlinux-keyring
+
 ping archlinux.org
 
 timedatectl
