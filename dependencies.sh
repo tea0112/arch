@@ -78,47 +78,6 @@ sudo pacman -S \
 	ttf-font-awesome \
 	terminus-font
 
-read -r -p "Install dependencies for i3?([yes]):" confirm
-case $confirm in
-yes)
-	pacman -S network-manager-applet \
-		xdg-utils \
-		xdg-desktop-portal \
-		picom \
-		i3-wm \
-		i3blocks \
-		i3lock \
-		numlockx \
-		i3status \
-		xterm \
-		flameshot \
-		rxvt-unicode \
-		ranger \
-		rofi \
-		dmenu \
-		rofimoji \
-		lightdm \
-		lightdm-gtk-greeter \
-		lxappearance \
-		arc-gtk-theme \
-		papirus-icon-theme \
-		polybar \
-		lxqt-policykit \
-		blueman \
-		xfce4-power-manager \
-		copyq \
-		autorandr \
-		pavucontrol \
-		thunnar \
-		feh \
-		xdg-desktop-portal-gtk
-	systemctl enable lightdm
-	;;
-*)
-	echo "You choose NO"
-	;;
-esac
-
 read -r -p "Install dependencies for Gnome([yes]):" confirm
 case $confirm in
 yes)
