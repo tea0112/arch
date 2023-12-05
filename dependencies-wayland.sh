@@ -32,11 +32,11 @@ sudo pacman -S \
 	tumbler \
 	fzf \
 	tmux \
+	tmuxp \
 	flatpak \
 	cmake \
 	meson \
 	rsync \
-	tmuxp \
 	dos2unix \
 	iw \
 	wpa_supplicant \
@@ -83,6 +83,7 @@ case $confirm in
 yes)
 	pacman -S --needed sway swaylock swayidle swaybg foot polkit greetd gtkgreet waybar wofi dmenu
 
+	systemctl enable greetd
 	;;
 *)
 	echo "You choose NO"
