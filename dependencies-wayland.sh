@@ -81,7 +81,7 @@ sudo pacman -S \
 read -r -p "Install dependencies for Swaywm([yes]):" confirm
 case $confirm in
 yes)
-	pacman -S --needed sway swaylock swayidle swaybg foot polkit greetd gtkgreet waybar wofi dmenu
+	pacman -S --needed sway swaylock swayidle swaybg foot polkit greetd greetd-gtkgreet waybar wofi dmenu
 
 	systemctl enable greetd
 	;;
