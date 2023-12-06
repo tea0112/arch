@@ -120,7 +120,7 @@ yes)
 		copyq \
 		autorandr \
 		pavucontrol \
-		thunnar \
+		thunar \
 		feh \
 		xdg-desktop-portal-gtk
 	systemctl enable lightdm
