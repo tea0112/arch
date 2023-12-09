@@ -2,6 +2,7 @@
 
 # FOR wayland
 sudo pacman -S \
+	nnn \
 	tesseract-data-eng \
 	grub \
 	efibootmgr \

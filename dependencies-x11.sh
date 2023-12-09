@@ -2,6 +2,7 @@
 
 # FOR X11
 sudo pacman -S \
+	nnn \
 	tesseract-data-eng \
 	grub \
 	efibootmgr \
