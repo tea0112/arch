@@ -28,7 +28,7 @@ mount /dev/sda1 /mnt/boot/efi
 mkdir -p /mnt/home
 mount /dev/sda4 /mnt/home
 
-pacstrap /mnt intel-ucode linux linux-headers linux-firmware base base-devel vim neovim nano git reflector
+pacstrap /mnt intel-ucode linux-lts linux-headers-lts linux-firmware base base-devel vim neovim nano git reflector
 
 genfstab -U /mnt >> /mnt/etc/fstab
 
