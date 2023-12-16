@@ -137,6 +137,7 @@ read -r -p "Install dependencies for Gnome([yes]):" confirm
 case $confirm in
 yes)
 	pacman -S gnome \
+		gnome-browser-connector \
 		gdm \
 		seahorse \
 		nautilus-sendto \
