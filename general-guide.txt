@@ -1,6 +1,3 @@
-# warning
-using wayland
-
 pacman-key --init
 pacman -S archlinux-keyring
 
@@ -61,7 +58,7 @@ mkinitcpio -P
 
 passwd
 
-- check out dependencies-wayland markdown file before install
+- check out dependencies-wayland,x11 bash file before install
 ```
 pacman -S grub efibootmgr sudo
 ```
@@ -91,4 +88,4 @@ EDITOR=nvim visudo
 ```
 
 - sound system
-- check out dependencies-wayland file before install
+- check out dependencies-wayland,x11 bash file before install

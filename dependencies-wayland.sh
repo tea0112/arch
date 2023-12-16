@@ -2,6 +2,7 @@
 
 # FOR wayland
 sudo pacman -S \
+	perl-file-mimeinfo \
 	nnn \
 	tesseract-data-eng \
 	grub \

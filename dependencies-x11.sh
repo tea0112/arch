@@ -2,6 +2,7 @@
 
 # FOR X11
 sudo pacman -S \
+	perl-file-mimeinfo \
 	nnn \
 	tesseract-data-eng \
 	grub \
@@ -136,6 +137,7 @@ read -r -p "Install dependencies for Gnome([yes]):" confirm
 case $confirm in
 yes)
 	pacman -S gnome \
+		gdm \
 		seahorse \
 		nautilus-sendto \
 		gnome-tweaks \
