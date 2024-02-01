@@ -134,7 +134,7 @@ passwd username
 ```
 
 ```
-usermod -aG wheel,audio,video,storage username
+usermod -aG wheel,audio,video,storage,docker username
 ```
 
 ```
