@@ -1,3 +1,6 @@
+mkfs.btrfs /dev/sda3
+
+
 ```
 mount /dev/sda3 /mnt
 ```
@@ -23,7 +26,7 @@ umount /mnt
 ```
 
 ```
-mount -o noatime,compress=zstd,space_cache=v2,ssd,subvol=@ /dev/sda3 /mnt
+mount -o noatime,compress=zstd,ssd,subvol=@ /dev/sda3 /mnt
 ```
 
 ```
