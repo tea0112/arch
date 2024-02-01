@@ -96,6 +96,7 @@ read -r -p "Install dependencies for i3?([yes]):" confirm
 case $confirm in
 yes)
 	pacman -S network-manager-applet \
+		xfce4-notifyd \
 		xdg-utils \
 		xdg-desktop-portal \
 		picom \
