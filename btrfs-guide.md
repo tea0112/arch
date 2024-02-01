@@ -11,6 +11,14 @@ btrfs sub create /mnt/@home
 ```
 
 ```
+btrfs sub create /mnt/@var_log
+```
+
+```
+btrfs sub create /mnt/@var_cache
+```
+
+```
 umount /mnt
 ```
 
@@ -19,15 +27,23 @@ mount -o noatime,compress=zstd,space_cache=v2,ssd,subvol=@ /dev/sda3 /mnt
 ```
 
 ```
-mkdir -p /mnt/{boot/efi,home,snapshots,btrfs}
+mkdir -p /mnt/{boot/efi,var/log,var/cache,home,snapshots,btrfs}
 ```
 
 ```
-mount -o noatime,compress=zstd,space_cache=v2,ssd,subvol=@home /dev/sda3 /mnt/home
+mount -o noatime,compress=zstd,ssd,subvol=@var_log /dev/sda3 /mnt/var/log
 ```
 
 ```
-mount -o noatime,compress=zstd,space_cache=v2,ssd,subvolid=5 /dev/sda3 /mnt/btrfs
+mount -o noatime,compress=zstd,ssd,subvol=@var_cache /dev/sda3 /mnt/var/cache
+```
+
+```
+mount -o noatime,compress=zstd,ssd,subvol=@home /dev/sda3 /mnt/home
+```
+
+```
+mount -o noatime,compress=zstd,ssd,subvolid=5 /dev/sda3 /mnt/btrfs
 ```
 
 ```
@@ -35,7 +51,7 @@ mount /dev/sda1 /mnt/boot/efi
 ```
 
 ```
-pacstrap /mnt intel-ucode linux-lts linux-lts-headers linux-firmware base base-devel btrfs-progs vim neovim nano git
+pacstrap /mnt intel-ucode linux linux-headers linux-firmware base base-devel btrfs-progs vim neovim nano git
 ```
 
 ```
