@@ -1,4 +1,9 @@
-mkfs.btrfs /dev/sda3
+mkswap /dev/sdx
+swapon
+
+mkfs.fat -F 32 /dev/sdx
+
+mkfs.btrfs /dev/sdx
 
 
 ```
