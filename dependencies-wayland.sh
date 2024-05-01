@@ -2,6 +2,7 @@
 
 # FOR wayland
 sudo pacman -S \
+	os-prober \
 	perl-file-mimeinfo \
 	nnn \
 	tesseract-data-eng \
