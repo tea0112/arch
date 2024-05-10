@@ -93,6 +93,17 @@ sudo pacman -S \
 	ttf-font-awesome \
 	terminus-font
 
+read -r -p "Install dependencies for Xfce?([yes]):" confirm
+case $confirm in
+yes)
+	pacman -S xfce4 xfce4-goodies lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings
+	systemctl enable lightdm
+	;;
+*)
+	echo "You choose NO"
+	;;
+esac
+
 read -r -p "Install dependencies for i3?([yes]):" confirm
 case $confirm in
 yes)

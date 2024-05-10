@@ -59,7 +59,7 @@ mount /dev/sda1 /mnt/boot/efi
 ```
 
 ```
-pacstrap /mnt intel-ucode linux linux-headers linux-firmware base base-devel btrfs-progs vim neovim nano git
+pacstrap /mnt intel-ucode linux linux-headers linux-firmware base base-devel btrfs-progs vim neovim nano git reflector
 ```
 
 ```
